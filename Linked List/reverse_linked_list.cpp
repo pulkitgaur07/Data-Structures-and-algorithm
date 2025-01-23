@@ -1,3 +1,7 @@
+// Question : 
+
+// Given the head of a linked list, the task is to reverse this list and return the reversed head.
+
 #include<iostream>
 #include<bits/stdc++.h>
 using namespace std;
