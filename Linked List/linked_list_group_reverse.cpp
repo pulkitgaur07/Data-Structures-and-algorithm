@@ -1,3 +1,7 @@
+// Question : 
+
+// Given the head a linked list, the task is to reverse every k node in the linked list. If the number of nodes is not a multiple of k then the left-out nodes in the end, should be considered as a group and must be reversed.
+
 #include<iostream>
 #include<bits/stdc++.h>
 using namespace std;
