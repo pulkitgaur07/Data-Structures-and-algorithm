@@ -1,3 +1,7 @@
+// Question : 
+
+// Given the head of two sorted linked lists consisting of nodes respectively. The task is to merge both lists and return the head of the sorted merged list.
+
 #include<iostream>
 #include<bits/stdc++.h>
 using namespace std;
