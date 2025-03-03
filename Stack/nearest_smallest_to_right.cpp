@@ -8,7 +8,7 @@ using namespace std;
 class Solution {
   public:
     // Function to find Nearest Smaller To Right
-    vector<int> NearestSmallerToLeft(vector<int> &l,vector<int> &arr){
+    vector<int> NearestSmallerToRight(vector<int> &l,vector<int> &arr){
         int n = arr.size();
         vector<int>ans(n,-1);
         stack<int>st;
