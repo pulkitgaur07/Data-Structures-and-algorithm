@@ -26,6 +26,10 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// Brute Force Approach
+// Time Complexity - O(n*n)
+// Space Complexity - O(1)
+
 class Solution {
 public:
     int numberOfSubstrings(string s) {
@@ -45,6 +49,10 @@ public:
         return ans;
     }
 };
+
+// Brute Force Approach
+// Time Complexity - O(n)
+// Space Complexity - O(1)
 
 class Solution {
 public:
