@@ -31,6 +31,9 @@
 
 // -Suppose our task is to reach our School and in order to reach there, first we need to get dressed. The dependencies to wear clothes is shown in the below dependency graph. For example you can not wear shoes before wearing socks.
 
+// Time Complexity: O(V+E). The above algorithm is simply DFS with an extra stack. So time complexity is the same as DFS
+// Auxiliary space: O(V). The extra space is needed for the stack
+
 #include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
