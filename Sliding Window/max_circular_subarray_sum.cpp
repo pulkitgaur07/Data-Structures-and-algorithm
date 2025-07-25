@@ -42,18 +42,11 @@ class Solution {
     }
     
     int maxCircularSum(vector<int> &arr) {
-        int neg = 0,total = 0;
-        int maxi = INT_MIN;
-        for(auto it : arr){
-            if(it < 0){
-                neg++;
-                maxi = max(maxi,it);
-            }
-            total += it;
-        }
-        if(neg == arr.size()) return maxi;
         int ans1 = maxSubarraySum(arr);
         int ans2 = minSubarraySum(arr);
+        int total = 0;
+        for(auto it : arr) total += it;
+        if(total == ans2) return ans1;
         int ans = max(ans1,total-ans2);
         return ans;
     }
