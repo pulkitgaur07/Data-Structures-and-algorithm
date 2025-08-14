@@ -37,4 +37,5 @@ class Solution {
         }
         return {ans1,ans2};
     }
+
 };
