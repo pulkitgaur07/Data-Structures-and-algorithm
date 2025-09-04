@@ -44,7 +44,6 @@ class Solution {
             if(!node) break;
             temp = node;
         }
-        
         return temp;
     }
 };
