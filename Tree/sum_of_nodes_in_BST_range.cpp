@@ -15,6 +15,10 @@
 // 0 ≤ node->data ≤ 104
 // 0 ≤ l ≤ r ≤ 104
 
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+
 class Node {
   public:
     int data;
