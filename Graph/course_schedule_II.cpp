@@ -55,3 +55,58 @@ class Solution {
         return ans;
     }
 };
+
+// Optimized Code by removing queue and grid
+
+class Solution {
+public:
+    void dfs(int row,int col,int m,int n,vector<vector<int>> &vis){
+        // traverse up
+        for(int i=row-1;i>=0;i--){
+            if(vis[i][col] == -2 || vis[i][col] == -1) break;
+            vis[i][col] = 1;
+        }
+        // traverse down
+        for(int i=row+1;i<m;i++){
+            if(vis[i][col] == -2 || vis[i][col] == -1) break;
+            vis[i][col] = 1;
+        }
+        // traverse left
+        for(int j=col-1;j>=0;j--){
+            if(vis[row][j] == -2 || vis[row][j] == -1) break;
+            vis[row][j] = 1;
+        }
+        // traverse right
+        for(int j=col+1;j<n;j++){
+            if(vis[row][j] == -2 || vis[row][j] == -1) break;
+            vis[row][j] = 1;
+        }
+    }
+    int countUnguarded(int m, int n, vector<vector<int>>& guards, vector<vector<int>>& walls) {
+        vector<vector<int>>vis(m,vector<int>(n,0));
+        for(auto it : guards){
+            int i = it[0];
+            int j = it[1];
+            vis[i][j] = -2;
+        }
+        for(auto it : walls){
+            int i = it[0];
+            int j = it[1];
+            vis[i][j] = -1;
+        }
+        for(auto it : guards){
+            int i = it[0];
+            int j = it[1];
+            dfs(i,j,m,n,vis);
+        }
+        int ans = 0;
+        for(int i=0;i<m;i++){
+            for(int j=0;j<n;j++){
+                if(!vis[i][j]){
+                    ans++;
+                }
+            }
+        }
+        return ans;
+    }
+};
